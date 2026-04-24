@@ -1,0 +1,550 @@
+---
+source: src/cstgen/mod.rs
+expression: tree
+input_file: src/cstgen/snapshots/validation/kitchen_sink.fin
+---
+File@0..992
+  Comment@0..22 "/// An optional value."
+  Whitespace@22..23 "\n"
+  Comment@23..26 "///"
+  Whitespace@26..27 "\n"
+  Comment@27..91 "/// A \\`Maybe(T)\\` is ..."
+  Whitespace@91..92 "\n"
+  ItemConst@92..160
+    PubKw@92..95 "pub"
+    Whitespace@95..96 " "
+    ConstKw@96..101 "const"
+    Whitespace@101..102 " "
+    PatIdent@102..108
+      Name@102..108
+        Ident@102..107 "Maybe"
+        Whitespace@107..108 " "
+    Eq@108..109 "="
+    Whitespace@109..110 " "
+    ExprClosure@110..157
+      Pipe@110..111 "|"
+      ArgList@111..124
+        Arg@111..124
+          ConstKw@111..116 "const"
+          Whitespace@116..117 " "
+          ExprIdent@117..118
+            Ident@117..118 "T"
+          Colon@118..119 ":"
+          Whitespace@119..120 " "
+          ExprIdent@120..124
+            Ident@120..124 "Type"
+      Pipe@124..125 "|"
+      Whitespace@125..126 " "
+      ExprEnum@126..157
+        EnumKw@126..130 "enum"
+        Whitespace@130..131 " "
+        BraceOpen@131..132 "{"
+        Whitespace@132..137 "\n    "
+        ExprIdent@137..141
+          Ident@137..141 "None"
+        Comma@141..142 ","
+        Whitespace@142..147 "\n    "
+        ExprCall@147..154
+          ExprIdent@147..151
+            Ident@147..151 "Some"
+          ParenOpen@151..152 "("
+          CallArgs@152..153
+            ExprIdent@152..153
+              Ident@152..153 "T"
+          ParenClose@153..154 ")"
+        Comma@154..155 ","
+        Whitespace@155..156 "\n"
+        BraceClose@156..157 "}"
+    Semi@157..158 ";"
+    Whitespace@158..160 "\n\n"
+  ItemConst@160..182
+    PubKw@160..163 "pub"
+    Whitespace@163..164 " "
+    ConstKw@164..169 "const"
+    Whitespace@169..170 " "
+    PatIdent@170..174
+      Name@170..174
+        Ident@170..173 "Foo"
+        Whitespace@173..174 " "
+    Eq@174..175 "="
+    Whitespace@175..176 " "
+    ExprCall@176..179
+      ExprIdent@176..177
+        Ident@176..177 "T"
+      ParenOpen@177..178 "("
+      CallArgs@178..178
+      ParenClose@178..179 ")"
+    Semi@179..180 ";"
+    Whitespace@180..182 "\n\n"
+  ItemConst@182..282
+    PubKw@182..185 "pub"
+    Whitespace@185..186 " "
+    ConstKw@186..191 "const"
+    Whitespace@191..192 " "
+    PatIdent@192..201
+      Name@192..201
+        Ident@192..200 "Iterator"
+        Whitespace@200..201 " "
+    Eq@201..202 "="
+    Whitespace@202..203 " "
+    ExprTrait@203..279
+      TraitKw@203..208 "trait"
+      Whitespace@208..209 " "
+      BraceOpen@209..210 "{"
+      Whitespace@210..215 "\n    "
+      ItemConst@215..237
+        ConstKw@215..220 "const"
+        Whitespace@220..221 " "
+        PatIdent@221..225
+          Name@221..225
+            Ident@221..225 "Item"
+        Type@225..231
+          Colon@225..226 ":"
+          Whitespace@226..227 " "
+          ExprIdent@227..231
+            Ident@227..231 "Type"
+        Semi@231..232 ";"
+        Whitespace@232..237 "\n    "
+      ItemConst@237..278
+        ConstKw@237..242 "const"
+        Whitespace@242..243 " "
+        PatIdent@243..247
+          Name@243..247
+            Ident@243..247 "next"
+        Type@247..276
+          Colon@247..248 ":"
+          Whitespace@248..249 " "
+          ExprClosure@249..276
+            Pipe@249..250 "|"
+            ArgList@250..255
+              Arg@250..255
+                ExprRef@250..255
+                  Ampersand@250..251 "&"
+                  ExprIdent@251..255
+                    Ident@251..255 "self"
+            Pipe@255..256 "|"
+            Whitespace@256..257 " "
+            Arrow@257..259 "->"
+            Whitespace@259..260 " "
+            ExprCall@260..276
+              ExprIdent@260..265
+                Ident@260..265 "Maybe"
+              ParenOpen@265..266 "("
+              CallArgs@266..275
+                ExprField@266..275
+                  ExprIdent@266..270
+                    Ident@266..270 "Self"
+                  Dot@270..271 "."
+                  ExprIdent@271..275
+                    Ident@271..275 "Item"
+              ParenClose@275..276 ")"
+        Semi@276..277 ";"
+        Whitespace@277..278 "\n"
+      BraceClose@278..279 "}"
+    Semi@279..280 ";"
+    Whitespace@280..282 "\n\n"
+  ItemConst@282..361
+    PubKw@282..285 "pub"
+    Whitespace@285..286 " "
+    ConstKw@286..291 "const"
+    Whitespace@291..292 " "
+    PatIdent@292..297
+      Name@292..297
+        Ident@292..296 "From"
+        Whitespace@296..297 " "
+    Eq@297..298 "="
+    Whitespace@298..299 " "
+    ExprClosure@299..358
+      Pipe@299..300 "|"
+      ArgList@300..313
+        Arg@300..313
+          ConstKw@300..305 "const"
+          Whitespace@305..306 " "
+          ExprIdent@306..307
+            Ident@306..307 "T"
+          Colon@307..308 ":"
+          Whitespace@308..309 " "
+          ExprIdent@309..313
+            Ident@309..313 "Type"
+      Pipe@313..314 "|"
+      Whitespace@314..315 " "
+      ExprTrait@315..358
+        TraitKw@315..320 "trait"
+        Whitespace@320..321 " "
+        BraceOpen@321..322 "{"
+        Whitespace@322..327 "\n    "
+        ItemConst@327..357
+          ConstKw@327..332 "const"
+          Whitespace@332..333 " "
+          PatIdent@333..337
+            Name@333..337
+              Ident@333..337 "from"
+          Type@337..355
+            Colon@337..338 ":"
+            Whitespace@338..339 " "
+            ExprClosure@339..355
+              Pipe@339..340 "|"
+              ArgList@340..346
+                Arg@340..346
+                  ExprIdent@340..343
+                    Ident@340..343 "val"
+                  Colon@343..344 ":"
+                  Whitespace@344..345 " "
+                  ExprIdent@345..346
+                    Ident@345..346 "T"
+              Pipe@346..347 "|"
+              Whitespace@347..348 " "
+              Arrow@348..350 "->"
+              Whitespace@350..351 " "
+              ExprIdent@351..355
+                Ident@351..355 "Self"
+          Semi@355..356 ";"
+          Whitespace@356..357 "\n"
+        BraceClose@357..358 "}"
+    Semi@358..359 ";"
+    Whitespace@359..361 "\n\n"
+  ItemConst@361..419
+    PubKw@361..364 "pub"
+    Whitespace@364..365 " "
+    ConstKw@365..370 "const"
+    Whitespace@370..371 " "
+    PatIdent@371..375
+      Name@371..375
+        Ident@371..374 "Box"
+        Whitespace@374..375 " "
+    Eq@375..376 "="
+    Whitespace@376..377 " "
+    ExprClosure@377..416
+      Pipe@377..378 "|"
+      ArgList@378..391
+        Arg@378..391
+          ConstKw@378..383 "const"
+          Whitespace@383..384 " "
+          ExprIdent@384..385
+            Ident@384..385 "T"
+          Colon@385..386 ":"
+          Whitespace@386..387 " "
+          ExprIdent@387..391
+            Ident@387..391 "Type"
+      Pipe@391..392 "|"
+      Whitespace@392..393 " "
+      ExprStruct@393..416
+        StructKw@393..399 "struct"
+        Whitespace@399..400 " "
+        BraceOpen@400..401 "{"
+        Whitespace@401..406 "\n    "
+        Name@406..409
+          Ident@406..409 "ptr"
+        Colon@409..410 ":"
+        Whitespace@410..411 " "
+        ExprPtr@411..413
+          Asterisk@411..412 "*"
+          ExprIdent@412..413
+            Ident@412..413 "T"
+        Comma@413..414 ","
+        Whitespace@414..415 "\n"
+        Name@415..415
+        BraceClose@415..416 "}"
+    Semi@416..417 ";"
+    Whitespace@417..419 "\n\n"
+  ItemConst@419..495
+    PubKw@419..422 "pub"
+    Whitespace@422..423 " "
+    ConstKw@423..428 "const"
+    Whitespace@428..429 " "
+    PatIdent@429..439
+      Name@429..439
+        Ident@429..438 "Recursive"
+        Whitespace@438..439 " "
+    Eq@439..440 "="
+    Whitespace@440..441 " "
+    ExprClosure@441..492
+      Pipe@441..442 "|"
+      ArgList@442..460
+        Arg@442..460
+          ConstKw@442..447 "const"
+          Whitespace@447..448 " "
+          ExprIdent@448..449
+            Ident@448..449 "T"
+          Colon@449..450 ":"
+          Whitespace@450..451 " "
+          ExprIdent@451..460
+            Ident@451..460 "Recursive"
+      Pipe@460..461 "|"
+      Whitespace@461..462 " "
+      ExprStruct@462..492
+        StructKw@462..468 "struct"
+        Whitespace@468..469 " "
+        BraceOpen@469..470 "{"
+        Whitespace@470..475 "\n    "
+        Name@475..478
+          Ident@475..478 "val"
+        Colon@478..479 ":"
+        Whitespace@479..480 " "
+        ExprIdent@480..489
+          Ident@480..489 "Recursive"
+        Comma@489..490 ","
+        Whitespace@490..491 "\n"
+        Name@491..491
+        BraceClose@491..492 "}"
+    Semi@492..493 ";"
+    Whitespace@493..495 "\n\n"
+  ItemExpr@495..669
+    ExprClosure@495..669
+      Pipe@495..496 "|"
+      ArgList@496..509
+        Arg@496..509
+          ConstKw@496..501 "const"
+          Whitespace@501..502 " "
+          ExprIdent@502..503
+            Ident@502..503 "T"
+          Colon@503..504 ":"
+          Whitespace@504..505 " "
+          ExprIdent@505..509
+            Ident@505..509 "Type"
+      Pipe@509..510 "|"
+      Whitespace@510..511 " "
+      ExprImpl@511..669
+        ImplKw@511..515 "impl"
+        Whitespace@515..516 " "
+        ExprCall@516..523
+          ExprIdent@516..519
+            Ident@516..519 "Box"
+          ParenOpen@519..520 "("
+          CallArgs@520..521
+            ExprIdent@520..521
+              Ident@520..521 "T"
+          ParenClose@521..522 ")"
+          Whitespace@522..523 " "
+        BraceOpen@523..524 "{"
+        Whitespace@524..529 "\n    "
+        ItemConst@529..666
+          PubKw@529..532 "pub"
+          Whitespace@532..533 " "
+          ConstKw@533..538 "const"
+          Whitespace@538..539 " "
+          PatIdent@539..543
+            Name@539..543
+              Ident@539..542 "new"
+              Whitespace@542..543 " "
+          Eq@543..544 "="
+          Whitespace@544..545 " "
+          ExprClosure@545..664
+            Pipe@545..546 "|"
+            ArgList@546..546
+              Arg@546..546
+            Pipe@546..547 "|"
+            Whitespace@547..548 " "
+            Arrow@548..550 "->"
+            Whitespace@550..551 " "
+            ExprIdent@551..556
+              Ident@551..555 "Self"
+              Whitespace@555..556 " "
+            ExprBlock@556..664
+              BraceOpen@556..557 "{"
+              Whitespace@557..566 "\n        "
+              StmtLocal@566..663
+                LetKw@566..569 "let"
+                Whitespace@569..570 " "
+                PatIdent@570..574
+                  Name@570..574
+                    Ident@570..573 "foo"
+                    Whitespace@573..574 " "
+                Eq@574..575 "="
+                Whitespace@575..576 " "
+                ExprIdent@576..579
+                  Ident@576..579 "bar"
+                Semi@579..580 ";"
+                Whitespace@580..589 "\n        "
+                Comment@589..600 "// if foo {"
+                Whitespace@600..609 "\n        "
+                Comment@609..629 "//    let bar = foo;"
+                Whitespace@629..638 "\n        "
+                Comment@638..642 "// }"
+                Whitespace@642..651 "\n        "
+                Comment@651..658 "// self"
+                Whitespace@658..663 "\n    "
+              BraceClose@663..664 "}"
+          Semi@664..665 ";"
+          Whitespace@665..666 "\n"
+        BraceClose@666..667 "}"
+        Whitespace@667..669 "\n\n"
+  ItemExpr@669..694
+    ExprImpl@669..694
+      ImplKw@669..673 "impl"
+      Whitespace@673..674 " "
+      ExprIdent@674..678
+        Ident@674..677 "Box"
+        Whitespace@677..678 " "
+      BraceOpen@678..679 "{"
+      Whitespace@679..684 "\n    "
+      Comment@684..690 "// ..."
+      Whitespace@690..691 "\n"
+      BraceClose@691..692 "}"
+      Whitespace@692..694 "\n\n"
+  ItemConst@694..808
+    ConstKw@694..699 "const"
+    Whitespace@699..700 " "
+    PatIdent@700..704
+      Name@700..704
+        Ident@700..703 "Foo"
+        Whitespace@703..704 " "
+    Eq@704..705 "="
+    Whitespace@705..706 " "
+    ExprClosure@706..805
+      Pipe@706..707 "|"
+      ArgList@707..707
+        Arg@707..707
+      Pipe@707..708 "|"
+      Whitespace@708..709 " "
+      Arrow@709..711 "->"
+      Whitespace@711..712 " "
+      ExprIdent@712..717
+        Ident@712..716 "Type"
+        Whitespace@716..717 " "
+      ExprBlock@717..805
+        BraceOpen@717..718 "{"
+        Whitespace@718..723 "\n    "
+        StmtLocal@723..804
+          LetKw@723..726 "let"
+          Whitespace@726..727 " "
+          PatIdent@727..731
+            Name@727..731
+              Ident@727..730 "foo"
+              Whitespace@730..731 " "
+          Eq@731..732 "="
+          Whitespace@732..733 " "
+          ExprIdent@733..737
+            Ident@733..737 "Type"
+          Semi@737..738 ";"
+          Whitespace@738..743 "\n    "
+          Comment@743..755 "// if Type {"
+          Whitespace@755..760 "\n    "
+          Comment@760..771 "//     Type"
+          Whitespace@771..776 "\n    "
+          Comment@776..780 "// }"
+          Whitespace@780..785 "\n    "
+          Comment@785..791 "// foo"
+          Whitespace@791..796 "\n    "
+          Comment@796..803 "// Type"
+          Whitespace@803..804 "\n"
+        BraceClose@804..805 "}"
+    Semi@805..806 ";"
+    Whitespace@806..808 "\n\n"
+  ItemConst@808..833
+    ConstKw@808..813 "const"
+    Whitespace@813..814 " "
+    PatIdent@814..819
+      Name@814..819
+        Ident@814..818 "Type"
+        Whitespace@818..819 " "
+    Eq@819..820 "="
+    Whitespace@820..821 " "
+    ExprStruct@821..830
+      StructKw@821..827 "struct"
+      Whitespace@827..828 " "
+      BraceOpen@828..829 "{"
+      Name@829..829
+      BraceClose@829..830 "}"
+    Semi@830..831 ";"
+    Whitespace@831..833 "\n\n"
+  ItemExpr@833..992
+    ExprClosure@833..992
+      Pipe@833..834 "|"
+      ArgList@834..847
+        Arg@834..847
+          ConstKw@834..839 "const"
+          Whitespace@839..840 " "
+          ExprIdent@840..841
+            Ident@840..841 "T"
+          Colon@841..842 ":"
+          Whitespace@842..843 " "
+          ExprIdent@843..847
+            Ident@843..847 "Type"
+      Pipe@847..848 "|"
+      Whitespace@848..849 " "
+      ExprImpl@849..992
+        ImplKw@849..853 "impl"
+        Whitespace@853..854 " "
+        ExprCall@854..861
+          ExprIdent@854..857
+            Ident@854..857 "Box"
+          ParenOpen@857..858 "("
+          CallArgs@858..859
+            ExprIdent@858..859
+              Ident@858..859 "T"
+          ParenClose@859..860 ")"
+          Whitespace@860..861 " "
+        BraceOpen@861..862 "{"
+        Whitespace@862..867 "\n    "
+        ItemConst@867..991
+          PubKw@867..870 "pub"
+          Whitespace@870..871 " "
+          ConstKw@871..876 "const"
+          Whitespace@876..877 " "
+          PatIdent@877..881
+            Name@877..881
+              Ident@877..880 "new"
+              Whitespace@880..881 " "
+          Eq@881..882 "="
+          Whitespace@882..883 " "
+          ExprClosure@883..989
+            Pipe@883..884 "|"
+            ArgList@884..884
+              Arg@884..884
+            Pipe@884..885 "|"
+            Whitespace@885..886 " "
+            Arrow@886..888 "->"
+            Whitespace@888..889 " "
+            ExprIdent@889..894
+              Ident@889..893 "Self"
+              Whitespace@893..894 " "
+            ExprBlock@894..989
+              BraceOpen@894..895 "{"
+              Whitespace@895..904 "\n        "
+              StmtLocal@904..927
+                LetKw@904..907 "let"
+                Whitespace@907..908 " "
+                PatIdent@908..912
+                  Name@908..912
+                    Ident@908..911 "foo"
+                    Whitespace@911..912 " "
+                Eq@912..913 "="
+                Whitespace@913..914 " "
+                ExprIdent@914..917
+                  Ident@914..917 "bar"
+                Semi@917..918 ";"
+                Whitespace@918..927 "\n        "
+              StmtExpr@927..979
+                ExprIf@927..979
+                  IfKw@927..929 "if"
+                  Whitespace@929..930 " "
+                  ExprIdent@930..934
+                    Ident@930..933 "foo"
+                    Whitespace@933..934 " "
+                  ExprBlock@934..979
+                    BraceOpen@934..935 "{"
+                    Whitespace@935..946 "\n          "
+                    StmtLocal@946..969
+                      LetKw@946..949 "let"
+                      Whitespace@949..950 " "
+                      PatIdent@950..954
+                        Name@950..954
+                          Ident@950..953 "bar"
+                          Whitespace@953..954 " "
+                      Eq@954..955 "="
+                      Whitespace@955..956 " "
+                      ExprIdent@956..959
+                        Ident@956..959 "foo"
+                      Semi@959..960 ";"
+                      Whitespace@960..969 "\n        "
+                    BraceClose@969..970 "}"
+                    Whitespace@970..979 "\n        "
+              StmtExpr@979..988
+                ExprIdent@979..988
+                  Ident@979..983 "self"
+                  Whitespace@983..988 "\n    "
+              BraceClose@988..989 "}"
+          Semi@989..990 ";"
+          Whitespace@990..991 "\n"
+        BraceClose@991..992 "}"

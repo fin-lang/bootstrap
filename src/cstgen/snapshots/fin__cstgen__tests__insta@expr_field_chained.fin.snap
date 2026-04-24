@@ -1,0 +1,17 @@
+---
+source: src/cstgen/mod.rs
+expression: tree
+input_file: src/cstgen/snapshots/validation/expr_field_chained.fin
+---
+File@0..5
+  ItemExpr@0..5
+    ExprField@0..5
+      ExprIdent@0..1
+        Ident@0..1 "a"
+      Dot@1..2 "."
+      ExprField@2..5
+        ExprIdent@2..3
+          Ident@2..3 "b"
+        Dot@3..4 "."
+        ExprIdent@4..5
+          Ident@4..5 "c"

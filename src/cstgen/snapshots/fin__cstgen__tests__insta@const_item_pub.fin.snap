@@ -1,0 +1,20 @@
+---
+source: src/cstgen/mod.rs
+expression: tree
+input_file: src/cstgen/snapshots/validation/const_item_pub.fin
+---
+File@0..20
+  ItemConst@0..20
+    PubKw@0..3 "pub"
+    Whitespace@3..4 " "
+    ConstKw@4..9 "const"
+    Whitespace@9..10 " "
+    PatIdent@10..14
+      Name@10..14
+        Ident@10..13 "Foo"
+        Whitespace@13..14 " "
+    Eq@14..15 "="
+    Whitespace@15..16 " "
+    ExprIdent@16..19
+      Ident@16..19 "bar"
+    Semi@19..20 ";"

@@ -1,0 +1,20 @@
+---
+source: src/cstgen/mod.rs
+expression: tree
+input_file: src/cstgen/snapshots/validation/expr_struct_with_field.fin
+---
+File@0..23
+  ItemExpr@0..23
+    ExprStruct@0..23
+      StructKw@0..6 "struct"
+      Whitespace@6..7 " "
+      BraceOpen@7..8 "{"
+      Whitespace@8..13 "\n    "
+      Name@13..16
+        Ident@13..16 "foo"
+      Colon@16..17 ":"
+      Whitespace@17..18 " "
+      ExprIdent@18..22
+        Ident@18..21 "Bar"
+        Whitespace@21..22 "\n"
+      BraceClose@22..23 "}"

@@ -1,0 +1,9 @@
+---
+source: src/cstgen/mod.rs
+expression: tree
+input_file: src/cstgen/snapshots/validation/expr_ident.fin
+---
+File@0..3
+  ItemExpr@0..3
+    ExprIdent@0..3
+      Ident@0..3 "foo"

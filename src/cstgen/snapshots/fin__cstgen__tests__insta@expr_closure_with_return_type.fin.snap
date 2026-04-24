@@ -1,0 +1,26 @@
+---
+source: src/cstgen/mod.rs
+expression: tree
+input_file: src/cstgen/snapshots/validation/expr_closure_with_return_type.fin
+---
+File@0..18
+  ItemExpr@0..18
+    ExprClosure@0..18
+      Pipe@0..1 "|"
+      ArgList@1..1
+        Arg@1..1
+      Pipe@1..2 "|"
+      Whitespace@2..3 " "
+      Arrow@3..5 "->"
+      Whitespace@5..6 " "
+      ExprIdent@6..10
+        Ident@6..9 "Ret"
+        Whitespace@9..10 " "
+      ExprBlock@10..18
+        BraceOpen@10..11 "{"
+        Whitespace@11..12 " "
+        StmtExpr@12..17
+          ExprIdent@12..17
+            Ident@12..16 "body"
+            Whitespace@16..17 " "
+        BraceClose@17..18 "}"

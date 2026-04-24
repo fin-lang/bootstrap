@@ -1,0 +1,23 @@
+---
+source: src/cstgen/mod.rs
+expression: tree
+input_file: src/cstgen/snapshots/validation/const_item_with_type_annotation.fin
+---
+File@0..21
+  ItemConst@0..21
+    ConstKw@0..5 "const"
+    Whitespace@5..6 " "
+    PatIdent@6..9
+      Name@6..9
+        Ident@6..9 "foo"
+    Type@9..15
+      Colon@9..10 ":"
+      Whitespace@10..11 " "
+      ExprIdent@11..15
+        Ident@11..14 "Bar"
+        Whitespace@14..15 " "
+    Eq@15..16 "="
+    Whitespace@16..17 " "
+    ExprIdent@17..20
+      Ident@17..20 "baz"
+    Semi@20..21 ";"

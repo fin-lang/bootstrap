@@ -1,0 +1,61 @@
+/// An optional value.
+///
+/// A \`Maybe(T)\` is either \`Some\` with a value, or \`None\`.
+pub const Maybe = |const T: Type| enum {
+    None,
+    Some(T),
+};
+
+pub const Foo = T();
+
+pub const Iterator = trait {
+    const Item: Type;
+    const next: |&self| -> Maybe(Self.Item);
+};
+
+pub const From = |const T: Type| trait {
+    const from: |val: T| -> Self;
+};
+
+pub const Box = |const T: Type| struct {
+    ptr: *T,
+};
+
+pub const Recursive = |const T: Recursive| struct {
+    val: Recursive,
+};
+
+|const T: Type| impl Box(T) {
+    pub const new = || -> Self {
+        let foo = bar;
+        // if foo {
+        //    let bar = foo;
+        // }
+        // self
+    };
+}
+
+impl Box {
+    // ...
+}
+
+const Foo = || -> Type {
+    let foo = Type;
+    // if Type {
+    //     Type
+    // }
+    // foo
+    // Type
+};
+
+const Type = struct {};
+
+|const T: Type| impl Box(T) {
+    pub const new = || -> Self {
+        let foo = bar;
+        if foo {
+          let bar = foo;
+        }
+        self
+    };
+}

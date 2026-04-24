@@ -1,0 +1,12 @@
+---
+source: src/cstgen/mod.rs
+expression: tree
+input_file: src/cstgen/snapshots/validation/expr_paren.fin
+---
+File@0..5
+  ItemExpr@0..5
+    ExprParen@0..5
+      ParenOpen@0..1 "("
+      ExprIdent@1..4
+        Ident@1..4 "foo"
+      ParenClose@4..5 ")"

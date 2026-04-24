@@ -1,0 +1,13 @@
+---
+source: src/cstgen/mod.rs
+expression: tree
+input_file: src/cstgen/snapshots/validation/expr_call_no_args.fin
+---
+File@0..5
+  ItemExpr@0..5
+    ExprCall@0..5
+      ExprIdent@0..3
+        Ident@0..3 "foo"
+      ParenOpen@3..4 "("
+      CallArgs@4..4
+      ParenClose@4..5 ")"

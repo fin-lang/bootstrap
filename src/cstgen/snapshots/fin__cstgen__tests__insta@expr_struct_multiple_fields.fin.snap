@@ -1,0 +1,28 @@
+---
+source: src/cstgen/mod.rs
+expression: tree
+input_file: src/cstgen/snapshots/validation/expr_struct_multiple_fields.fin
+---
+File@0..29
+  ItemExpr@0..29
+    ExprStruct@0..29
+      StructKw@0..6 "struct"
+      Whitespace@6..7 " "
+      BraceOpen@7..8 "{"
+      Whitespace@8..13 "\n    "
+      Name@13..14
+        Ident@13..14 "a"
+      Colon@14..15 ":"
+      Whitespace@15..16 " "
+      ExprIdent@16..17
+        Ident@16..17 "A"
+      Comma@17..18 ","
+      Whitespace@18..23 "\n    "
+      Name@23..24
+        Ident@23..24 "b"
+      Colon@24..25 ":"
+      Whitespace@25..26 " "
+      ExprIdent@26..28
+        Ident@26..27 "B"
+        Whitespace@27..28 "\n"
+      BraceClose@28..29 "}"

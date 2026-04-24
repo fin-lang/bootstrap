@@ -1,0 +1,3 @@
+impl Foo {
+    const bar = baz;
+}

@@ -4,3 +4,8 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
+dashmap = "6.1.0"
+insta = { version = "1.47.1", features = ["glob"] }
+logos = "0.16.0"
+rowan = "0.16.1"
+salsa = "0.25.2"

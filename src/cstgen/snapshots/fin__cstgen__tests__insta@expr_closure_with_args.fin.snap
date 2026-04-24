@@ -1,0 +1,22 @@
+---
+source: src/cstgen/mod.rs
+expression: tree
+input_file: src/cstgen/snapshots/validation/expr_closure_with_args.fin
+---
+File@0..11
+  ItemExpr@0..11
+    ExprClosure@0..11
+      Pipe@0..1 "|"
+      ArgList@1..5
+        Arg@1..2
+          ExprIdent@1..2
+            Ident@1..2 "a"
+        Comma@2..3 ","
+        Whitespace@3..4 " "
+        Arg@4..5
+          ExprIdent@4..5
+            Ident@4..5 "b"
+      Pipe@5..6 "|"
+      Whitespace@6..7 " "
+      ExprIdent@7..11
+        Ident@7..11 "body"

@@ -1,0 +1,19 @@
+---
+source: src/cstgen/mod.rs
+expression: tree
+input_file: src/cstgen/snapshots/validation/expr_closure_with_self_ref.fin
+---
+File@0..12
+  ItemExpr@0..12
+    ExprClosure@0..12
+      Pipe@0..1 "|"
+      ArgList@1..6
+        Arg@1..6
+          ExprRef@1..6
+            Ampersand@1..2 "&"
+            ExprIdent@2..6
+              Ident@2..6 "self"
+      Pipe@6..7 "|"
+      Whitespace@7..8 " "
+      ExprIdent@8..12
+        Ident@8..12 "body"
