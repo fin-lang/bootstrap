@@ -1,0 +1,20 @@
+---
+source: crates/fin_parser/src/lib.rs
+expression: tree
+input_file: crates/fin_parser/src/snapshots/validation/doc_comment.fin
+---
+File@0..32
+  Comment@0..17 "/// a doc comment"
+  Whitespace@17..18 "\n"
+  ItemConst@18..32
+    ConstKw@18..23 "const"
+    Whitespace@23..24 " "
+    PatIdent@24..26
+      Name@24..26
+        Ident@24..25 "x"
+        Whitespace@25..26 " "
+    Eq@26..27 "="
+    Whitespace@27..28 " "
+    ExprIdent@28..31
+      Ident@28..31 "foo"
+    Semi@31..32 ";"

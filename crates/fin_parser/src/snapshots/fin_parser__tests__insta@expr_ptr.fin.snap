@@ -1,0 +1,11 @@
+---
+source: crates/fin_parser/src/lib.rs
+expression: tree
+input_file: crates/fin_parser/src/snapshots/validation/expr_ptr.fin
+---
+File@0..4
+  ItemExpr@0..4
+    ExprPtr@0..4
+      Asterisk@0..1 "*"
+      ExprIdent@1..4
+        Ident@1..4 "foo"

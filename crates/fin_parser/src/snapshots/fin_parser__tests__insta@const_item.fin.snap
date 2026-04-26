@@ -1,0 +1,18 @@
+---
+source: crates/fin_parser/src/lib.rs
+expression: tree
+input_file: crates/fin_parser/src/snapshots/validation/const_item.fin
+---
+File@0..16
+  ItemConst@0..16
+    ConstKw@0..5 "const"
+    Whitespace@5..6 " "
+    PatIdent@6..10
+      Name@6..10
+        Ident@6..9 "Foo"
+        Whitespace@9..10 " "
+    Eq@10..11 "="
+    Whitespace@11..12 " "
+    ExprIdent@12..15
+      Ident@12..15 "bar"
+    Semi@15..16 ";"

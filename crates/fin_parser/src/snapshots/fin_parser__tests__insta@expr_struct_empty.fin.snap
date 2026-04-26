@@ -1,0 +1,13 @@
+---
+source: crates/fin_parser/src/lib.rs
+expression: tree
+input_file: crates/fin_parser/src/snapshots/validation/expr_struct_empty.fin
+---
+File@0..9
+  ItemExpr@0..9
+    ExprStruct@0..9
+      StructKw@0..6 "struct"
+      Whitespace@6..7 " "
+      BraceOpen@7..8 "{"
+      Name@8..8
+      BraceClose@8..9 "}"

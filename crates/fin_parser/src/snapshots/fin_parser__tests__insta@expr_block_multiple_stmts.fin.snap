@@ -1,0 +1,41 @@
+---
+source: crates/fin_parser/src/lib.rs
+expression: tree
+input_file: crates/fin_parser/src/snapshots/validation/expr_block_multiple_stmts.fin
+---
+File@0..39
+  ItemExpr@0..39
+    ExprBlock@0..39
+      BraceOpen@0..1 "{"
+      Whitespace@1..6 "\n    "
+      StmtLocal@6..21
+        LetKw@6..9 "let"
+        Whitespace@9..10 " "
+        PatIdent@10..12
+          Name@10..12
+            Ident@10..11 "a"
+            Whitespace@11..12 " "
+        Eq@12..13 "="
+        Whitespace@13..14 " "
+        ExprIdent@14..15
+          Ident@14..15 "b"
+        Semi@15..16 ";"
+        Whitespace@16..21 "\n    "
+      StmtLocal@21..36
+        LetKw@21..24 "let"
+        Whitespace@24..25 " "
+        PatIdent@25..27
+          Name@25..27
+            Ident@25..26 "c"
+            Whitespace@26..27 " "
+        Eq@27..28 "="
+        Whitespace@28..29 " "
+        ExprIdent@29..30
+          Ident@29..30 "d"
+        Semi@30..31 ";"
+        Whitespace@31..36 "\n    "
+      StmtExpr@36..38
+        ExprIdent@36..38
+          Ident@36..37 "e"
+          Whitespace@37..38 "\n"
+      BraceClose@38..39 "}"

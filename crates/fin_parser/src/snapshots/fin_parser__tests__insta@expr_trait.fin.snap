@@ -1,0 +1,26 @@
+---
+source: crates/fin_parser/src/lib.rs
+expression: tree
+input_file: crates/fin_parser/src/snapshots/validation/expr_trait.fin
+---
+File@0..29
+  ItemExpr@0..29
+    ExprTrait@0..29
+      TraitKw@0..5 "trait"
+      Whitespace@5..6 " "
+      BraceOpen@6..7 "{"
+      Whitespace@7..12 "\n    "
+      ItemConst@12..28
+        ConstKw@12..17 "const"
+        Whitespace@17..18 " "
+        PatIdent@18..21
+          Name@18..21
+            Ident@18..21 "foo"
+        Type@21..26
+          Colon@21..22 ":"
+          Whitespace@22..23 " "
+          ExprIdent@23..26
+            Ident@23..26 "Bar"
+        Semi@26..27 ";"
+        Whitespace@27..28 "\n"
+      BraceClose@28..29 "}"

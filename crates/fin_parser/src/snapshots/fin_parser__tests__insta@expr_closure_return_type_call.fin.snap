@@ -1,0 +1,27 @@
+---
+source: crates/fin_parser/src/lib.rs
+expression: tree
+input_file: crates/fin_parser/src/snapshots/validation/expr_closure_return_type_call.fin
+---
+File@0..17
+  ItemExpr@0..13
+    ExprClosure@0..13
+      Pipe@0..1 "|"
+      ArgList@1..1
+        Arg@1..1
+      Pipe@1..2 "|"
+      Whitespace@2..3 " "
+      Arrow@3..5 "->"
+      Whitespace@5..6 " "
+      ExprCall@6..13
+        ExprIdent@6..9
+          Ident@6..9 "Ret"
+        ParenOpen@9..10 "("
+        CallArgs@10..11
+          ExprIdent@10..11
+            Ident@10..11 "T"
+        ParenClose@11..12 ")"
+        Whitespace@12..13 " "
+  ItemExpr@13..17
+    ExprIdent@13..17
+      Ident@13..17 "body"

@@ -1,0 +1,22 @@
+---
+source: crates/fin_parser/src/lib.rs
+expression: tree
+input_file: crates/fin_parser/src/snapshots/validation/stmt_local.fin
+---
+File@0..12
+  ItemExpr@0..12
+    ExprBlock@0..12
+      BraceOpen@0..1 "{"
+      StmtLocal@1..11
+        LetKw@1..4 "let"
+        Whitespace@4..5 " "
+        PatIdent@5..7
+          Name@5..7
+            Ident@5..6 "y"
+            Whitespace@6..7 " "
+        Eq@7..8 "="
+        Whitespace@8..9 " "
+        ExprIdent@9..10
+          Ident@9..10 "z"
+        Semi@10..11 ";"
+      BraceClose@11..12 "}"

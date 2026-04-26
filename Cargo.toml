@@ -1,11 +1,18 @@
-[package]
-name = "fin"
-version = "0.1.0"
-edition = "2024"
+[workspace]
+members = ["crates/*"]
+resolver = "3"
 
-[dependencies]
+[workspace.package]
+edition = "2024"
+license = "MIT OR Apache-2.0"
+authors = ["fin team"]
+repository = "https://github.com/fin-lang/bootstrap"
+
+[workspace.dependencies]
+fin_parser = { path = "crates/fin_parser" }
+fin_syntax = { path = "crates/fin_syntax" }
+rowan = "0.16.1"
+salsa = "0.25.2"
 dashmap = "6.1.0"
 insta = { version = "1.47.1", features = ["glob"] }
 logos = "0.16.0"
-rowan = "0.16.1"
-salsa = "0.25.2"

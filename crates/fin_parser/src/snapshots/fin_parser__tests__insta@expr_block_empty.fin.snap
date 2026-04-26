@@ -1,0 +1,10 @@
+---
+source: crates/fin_parser/src/lib.rs
+expression: tree
+input_file: crates/fin_parser/src/snapshots/validation/expr_block_empty.fin
+---
+File@0..2
+  ItemExpr@0..2
+    ExprBlock@0..2
+      BraceOpen@0..1 "{"
+      BraceClose@1..2 "}"

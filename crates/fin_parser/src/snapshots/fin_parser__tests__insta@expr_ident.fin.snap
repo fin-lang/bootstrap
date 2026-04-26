@@ -1,0 +1,9 @@
+---
+source: crates/fin_parser/src/lib.rs
+expression: tree
+input_file: crates/fin_parser/src/snapshots/validation/expr_ident.fin
+---
+File@0..3
+  ItemExpr@0..3
+    ExprIdent@0..3
+      Ident@0..3 "foo"

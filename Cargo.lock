@@ -161,10 +161,24 @@ name = "fin"
 version = "0.1.0"
 dependencies = [
  "dashmap",
+ "salsa",
+]
+
+[[package]]
+name = "fin_parser"
+version = "0.1.0"
+dependencies = [
  "insta",
  "logos",
  "rowan",
- "salsa",
+]
+
+[[package]]
+name = "fin_syntax"
+version = "0.1.0"
+dependencies = [
+ "fin_parser",
+ "rowan",
 ]
 
 [[package]]

@@ -1,0 +1,21 @@
+---
+source: crates/fin_parser/src/lib.rs
+expression: tree
+input_file: crates/fin_parser/src/snapshots/validation/expr_call_chained.fin
+---
+File@0..9
+  ItemExpr@0..9
+    ExprCall@0..9
+      ExprCall@0..6
+        ExprIdent@0..3
+          Ident@0..3 "foo"
+        ParenOpen@3..4 "("
+        CallArgs@4..5
+          ExprIdent@4..5
+            Ident@4..5 "a"
+        ParenClose@5..6 ")"
+      ParenOpen@6..7 "("
+      CallArgs@7..8
+        ExprIdent@7..8
+          Ident@7..8 "b"
+      ParenClose@8..9 ")"
